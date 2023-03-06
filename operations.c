@@ -6,17 +6,17 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 09:39:51 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/06 11:25:54 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/06 14:21:45 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_stacks *s, int msize)
+void	sa(t_stacks *s)
 {
 	int	c;
 
-	if (msize < 2)
+	if (s->as < 2)
 		return ;
 
 	c = s->a[0];
@@ -24,11 +24,11 @@ void	sa(t_stacks *s, int msize)
 	s->a[1] = c;
 }
 
-void	sb(t_stacks *s, int msize)
+void	sb(t_stacks *s)
 {
 	int	c;
 
-	if (msize < 2)
+	if (s->bs < 2)
 		return ;
 
 	c = s->b[0];
@@ -36,10 +36,10 @@ void	sb(t_stacks *s, int msize)
 	s->b[1] = c;
 }
 
-void	ss(t_stacks *s, int msize)
+void	ss(t_stacks *s)
 {
-	sa(s, msize);
-	sb(s, msize);
+	sa(s);
+	sb(s);
 }
 
 void	pa(t_stacks *s)

@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:38:24 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/06 13:21:42 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/06 14:20:48 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ typedef struct s_stacks
 	int	bs;
 }				t_stacks;
 
-void	sa(t_stacks *s, int size);
-void	sb(t_stacks *s, int size);
-void	ss(t_stacks *s, int size);
+void	sa(t_stacks *s);
+void	sb(t_stacks *s);
+void	ss(t_stacks *s);
 void	pa(t_stacks *s);
 void	pb(t_stacks *s);
 void	ra(t_stacks *s);
