@@ -1,34 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/06 08:38:24 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/06 11:10:12 by fvon-nag         ###   ########.fr       */
+/*   Created: 2023/03/06 10:45:44 by fvon-nag          #+#    #+#             */
+/*   Updated: 2023/03/06 10:52:12 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+//int	stacksize(int *s, int msize)
+//{
+//	int	i;
 
-# include <stdlib.h>
-# include "libft/libft.h"
-# include <fcntl.h>
-
-typedef struct s_stacks
-{
-	int	*a;
-	int	*b;
-	int	as;
-	int	bs;
-}				t_stacks;
-
-void	sa(t_stacks *s, int size);
-void	sb(t_stacks *s, int size);
-void	ss(t_stacks *s, int size);
-void	pa(t_stacks *s);
-void	pb(t_stacks *s);
-
-#endif
+//	i = 0;
+//	while (i < msize)
+//}
