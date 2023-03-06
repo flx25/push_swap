@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 09:39:51 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/06 14:21:45 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/06 14:39:14 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	sa(t_stacks *s)
 	c = s->a[0];
 	s->a[0] = s->a[1];
 	s->a[1] = c;
+	ft_printf("sa\n");
 }
 
 void	sb(t_stacks *s)
@@ -34,12 +35,14 @@ void	sb(t_stacks *s)
 	c = s->b[0];
 	s->b[0] = s->b[1];
 	s->b[1] = c;
+	ft_printf("sb\n");
 }
 
 void	ss(t_stacks *s)
 {
 	sa(s);
 	sb(s);
+	ft_printf("ss\n");
 }
 
 void	pa(t_stacks *s)
@@ -65,7 +68,7 @@ void	pa(t_stacks *s)
 		i++;
 	}
 	s->bs--;
-
+	ft_printf("pa\n");
 }
 
 void	pb(t_stacks *s)
@@ -91,5 +94,5 @@ void	pb(t_stacks *s)
 		i++;
 	}
 	s->as--;
-
+	ft_printf("pb\n");
 }

@@ -6,12 +6,13 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:33:02 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/06 14:23:02 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/06 14:34:18 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// add error checks (non integers,etc)
 int	createstacks(int argc, char **argv, t_stacks *s)
 {
 	int	i;
@@ -51,7 +52,7 @@ void	printarrays(t_stacks s)
 	}
 }
 
-//void	sortbysize(t_stacks *s, int size)
+//void	sortbysize(t_stacks *s)
 //{
 
 //}
@@ -61,17 +62,8 @@ int	main(int argc, char **argv)
 	t_stacks	s;
 
 	createstacks(argc, argv, &s);
-	//sortbysize(&s, msize);
-	sa(&s);
-	pb(&s);
-	pb(&s);
-	pb(&s);
-	rr(&s);
-	rrr(&s);
-	sa(&s);
-	pa(&s);
-	pa(&s);
-	pa(&s);
+	sortbysize(&s, msize);
+
 	printarrays(s);
 	return (0);
 }

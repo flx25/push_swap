@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 13:15:46 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/06 14:13:29 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/06 14:40:15 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	rra(t_stacks *s)
 		i--;
 	}
 	s->a[0] = c;
+	ft_printf("rra\n");
 }
 
 void	rrb(t_stacks *s)
@@ -40,10 +41,12 @@ void	rrb(t_stacks *s)
 		i--;
 	}
 	s->b[0] = c;
+	ft_printf("rrb\n");
 }
 
 void	rrr(t_stacks *s)
 {
 	rra(s);
 	rrb(s);
+	ft_printf("rrr\n");
 }
