@@ -6,13 +6,14 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:33:02 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/06 17:59:26 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/06 19:18:15 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 // add error checks (non integers,etc)
+// 5 1 3 2 4
 int	createstacks(int argc, char **argv, t_stacks *s)
 {
 	int	i;
