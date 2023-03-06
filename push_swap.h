@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:38:24 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/06 15:19:29 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/06 17:52:40 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,5 @@ void	rrb(t_stacks *s);
 void	rrr(t_stacks *s);
 void	sort2(t_stacks *s);
 void	sort3(t_stacks *s);
+void	sort5(t_stacks *s);
 #endif
