@@ -1,37 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   operations2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/06 08:38:24 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/06 11:39:48 by fvon-nag         ###   ########.fr       */
+/*   Created: 2023/03/06 11:26:07 by fvon-nag          #+#    #+#             */
+/*   Updated: 2023/03/06 11:39:36 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include <stdlib.h>
-# include "libft/libft.h"
-# include <fcntl.h>
-
-typedef struct s_stacks
+void	ra(t_stacks *s)
 {
-	int	*a;
-	int	*b;
-	int	as;
-	int	bs;
-}				t_stacks;
+	int	c;
+	int	i;
 
-void	sa(t_stacks *s, int size);
-void	sb(t_stacks *s, int size);
-void	ss(t_stacks *s, int size);
-void	pa(t_stacks *s);
-void	pb(t_stacks *s);
-void	ra(t_stacks *s);
-void	rb(t_stacks *s);
-void	rr(t_stacks *s);
+	c = s->a[0];
+	i = 0;
+	while (i < s->as)
+	{
+		s->a[i] = s->a[i + 1];
+		i++;
+	}
+	s->a[s->as -1] = c;
+}
 
-#endif
+void	rb(t_stacks *s)
+{
+	int	c;
+	int	i;
+
+	c = s->b[0];
+	i = 0;
+	while (i < s->bs)
+	{
+		s->b[i] = s->b[i + 1];
+		i++;
+	}
+	s->b[s->bs -1] = c;
+}
+
+void	rr(t_stacks *s)
+{
+	ra(s);
+	rb(s);
+}

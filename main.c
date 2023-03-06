@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:33:02 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/06 11:16:03 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/06 11:46:36 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,19 @@ int	createstacks(int argc, char **argv, t_stacks *s)
 	return (argc - 1);
 }
 
-void	printarrays(int msize, t_stacks s)
+void	printarrays(t_stacks s)
 {
 	int	i;
 
 	i = 0;
-	while (i < msize)
+	while (i < s.as)
 	{
 		ft_printf("a[%i] == %i\n", i, s.a[i]);
 		i++;
 	}
 	i = 0;
-	while (i < msize)
+	ft_printf("\n");
+	while (i < s.bs)
 	{
 		ft_printf("b[%i] == %i\n", i, s.b[i]);
 		i++;
@@ -58,10 +59,13 @@ void	printarrays(int msize, t_stacks s)
 int	main(int argc, char **argv)
 {
 	t_stacks	s;
-	int			msize;
 
-	msize = createstacks(argc, argv, &s);
-	//sortbysize(&s, size);
-	printarrays(msize, s);
+	createstacks(argc, argv, &s);
+	//sortbysize(&s, msize);
+	pb(&s);
+	pb(&s);
+	pb(&s);
+	//rr(&s);
+	printarrays(s);
 	return (0);
 }

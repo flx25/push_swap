@@ -6,12 +6,14 @@
 #    By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 09:42:12 by fvon-nag          #+#    #+#              #
-#    Updated: 2023/03/06 09:48:42 by fvon-nag         ###   ########.fr        #
+#    Updated: 2023/03/06 11:34:42 by fvon-nag         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SOURCES = main.c \
 		operations.c\
+		operations2.c\
+
 
 
 
