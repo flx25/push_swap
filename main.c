@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:33:02 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/06 14:34:18 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/06 14:47:14 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,17 +52,18 @@ void	printarrays(t_stacks s)
 	}
 }
 
-//void	sortbysize(t_stacks *s)
-//{
-
-//}
+void	sortbysize(t_stacks *s)
+{
+	if (s->as == 2)
+		sort2(s);
+}
 
 int	main(int argc, char **argv)
 {
 	t_stacks	s;
 
 	createstacks(argc, argv, &s);
-	sortbysize(&s, msize);
+	sortbysize(&s);
 
 	printarrays(s);
 	return (0);
