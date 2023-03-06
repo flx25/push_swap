@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 14:47:29 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/06 14:51:47 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/06 15:24:19 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,24 @@ void	sort2(t_stacks *s)
 {
 	if (s->a[0] > s->a[1])
 		sa(s);
+}
+
+void	sort3(t_stacks *s)
+{
+	if (s->a[0] > s->a[1] && s->a[2] > s->a[0])
+		sa(s);
+	if (s->a[0] > s->a[1] && s->a[2] < s->a[1])
+	{
+		sa(s);
+		rra(s);
+	}
+	else if (s->a[0] > s->a[1] && s->a[1] < s->a[2])
+		ra(s);
+	else if (s->a[0] < s->a[1] && s->a[1] > s->a[2] && s->a[0] < s->a[2])
+	{
+		sa(s);
+		ra(s);
+	}
+	else if (s->a[0] < s->a[1] && s->a[1] > s->a[2])
+		rra(s);
 }
