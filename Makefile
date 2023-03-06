@@ -6,13 +6,14 @@
 #    By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 09:42:12 by fvon-nag          #+#    #+#              #
-#    Updated: 2023/03/06 11:34:42 by fvon-nag         ###   ########.fr        #
+#    Updated: 2023/03/06 13:23:38 by fvon-nag         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SOURCES = main.c \
 		operations.c\
 		operations2.c\
+		operations3.c\
 
 
 
@@ -21,7 +22,7 @@ OBJECTS = $(SOURCES:.c=.o)
 
 NAME = push_swap
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 all: $(NAME)
 

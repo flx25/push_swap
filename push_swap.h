@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:38:24 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/06 11:39:48 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/06 13:21:42 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,8 @@ void	pb(t_stacks *s);
 void	ra(t_stacks *s);
 void	rb(t_stacks *s);
 void	rr(t_stacks *s);
+void	rra(t_stacks *s);
+void	rrb(t_stacks *s);
+void	rrr(t_stacks *s);
 
 #endif
