@@ -6,14 +6,13 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:33:02 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/07 14:55:40 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/07 15:57:07 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 // add error checks (non integers,etc)
-// sort small does not work for 4 67 3 87 23
 int	createstacks(int argc, char **argv, t_stacks *s)
 {
 	int	i;
