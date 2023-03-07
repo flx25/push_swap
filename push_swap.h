@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:38:24 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/07 10:31:35 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/07 11:17:53 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_stacks
 	int	*b;
 	int	as;
 	int	bs;
+	int	max;
 }				t_stacks;
 
 void	sa(t_stacks *s);
@@ -41,6 +42,7 @@ void	sort3(t_stacks *s);
 void	sort5(t_stacks *s);
 int		findind(int num, t_stacks *s);
 void	sortbig(t_stacks *s);
-void	ctoindex(t_stacks *s);
+void	toindex(t_stacks *s);
+void	sortrdx0(t_stacks *s);
 
 #endif

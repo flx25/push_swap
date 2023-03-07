@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 09:39:51 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/06 14:39:14 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/07 12:41:44 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,8 @@ void	pa(t_stacks *s)
 {
 	int	i;
 
-	if (!s->b[0])
+	if (s->bs == 0)
 		return ;
-
 	i = s->as;
 	while (i > 0)
 	{
@@ -60,7 +59,6 @@ void	pa(t_stacks *s)
 	}
 	s->a[0] = s->b[0];
 	s->as++;
-
 	i = 0;
 	while (i < s->bs)
 	{
@@ -75,9 +73,8 @@ void	pb(t_stacks *s)
 {
 	int	i;
 
-	if (!s->a[0])
+	if (s->as == 0)
 		return ;
-
 	i = s->bs;
 	while (i > 0)
 	{
@@ -86,7 +83,6 @@ void	pb(t_stacks *s)
 	}
 	s->b[0] = s->a[0];
 	s->bs++;
-
 	i = 0;
 	while (i < s->as)
 	{
