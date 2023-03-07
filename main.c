@@ -6,13 +6,14 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:33:02 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/07 15:57:07 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/07 16:56:04 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 // add error checks (non integers,etc)
+//remove printarray
 int	createstacks(int argc, char **argv, t_stacks *s)
 {
 	int	i;
@@ -72,6 +73,6 @@ int	main(int argc, char **argv)
 	createstacks(argc, argv, &s);
 	sortbysize(&s);
 
-	printarrays(s);
+	//printarrays(s);
 	return (0);
 }
