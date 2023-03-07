@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 14:47:29 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/06 19:20:01 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/07 09:02:26 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ void	sort5(t_stacks *s)
 
 	while (s->bs > 0)
 	{
-		if (s->a[s->as -1] < s->b[0] && (s->a[0] > s->b[0]))
+		if (findind(s->b[0], s) == findind(s->a[2], s) + 1
+			|| findind(s->b[0], s) == findind(s->a[0], s) - 1)
 			pa(s);
 		else
 			ra(s);

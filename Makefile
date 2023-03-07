@@ -6,7 +6,7 @@
 #    By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 09:42:12 by fvon-nag          #+#    #+#              #
-#    Updated: 2023/03/06 14:50:33 by fvon-nag         ###   ########.fr        #
+#    Updated: 2023/03/07 08:41:03 by fvon-nag         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ SOURCES = main.c \
 		operations2.c\
 		operations3.c\
 		sortsmall.c\
+		utils.c\
 
 
 
