@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:33:02 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/07 08:53:24 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/07 10:17:04 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ void	sortbysize(t_stacks *s)
 		sort3(s);
 	else if (s->as > 3 && s->as <= 5)
 		sort5(s);
+	else if (s->as > 5)
+		sortbig(s);
 }
 
 int	main(int argc, char **argv)
