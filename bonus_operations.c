@@ -1,0 +1,87 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   bonus_operations.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/08 15:01:54 by fvon-nag          #+#    #+#             */
+/*   Updated: 2023/03/08 15:02:42 by fvon-nag         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
+
+void	sa(t_stacks *s)
+{
+	int	c;
+
+	if (s->as < 2)
+		return ;
+	c = s->a[0];
+	s->a[0] = s->a[1];
+	s->a[1] = c;
+}
+
+void	sb(t_stacks *s)
+{
+	int	c;
+
+	if (s->bs < 2)
+		return ;
+	c = s->b[0];
+	s->b[0] = s->b[1];
+	s->b[1] = c;
+}
+
+void	ss(t_stacks *s)
+{
+	sa(s);
+	sb(s);
+}
+
+void	pa(t_stacks *s)
+{
+	int	i;
+
+	if (s->bs == 0)
+		return ;
+	i = s->as;
+	while (i > 0)
+	{
+		s->a[i] = s->a[i - 1];
+		i--;
+	}
+	s->a[0] = s->b[0];
+	s->as++;
+	i = 0;
+	while (i < s->bs)
+	{
+		s->b[i] = s->b[i +1];
+		i++;
+	}
+	s->bs--;
+}
+
+void	pb(t_stacks *s)
+{
+	int	i;
+
+	if (s->as == 0)
+		return ;
+	i = s->bs;
+	while (i > 0)
+	{
+		s->b[i] = s->b[i - 1];
+		i--;
+	}
+	s->b[0] = s->a[0];
+	s->bs++;
+	i = 0;
+	while (i < s->as)
+	{
+		s->a[i] = s->a[i +1];
+		i++;
+	}
+	s->as--;
+}

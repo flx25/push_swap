@@ -6,7 +6,7 @@
 #    By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 09:42:12 by fvon-nag          #+#    #+#              #
-#    Updated: 2023/03/08 13:51:58 by fvon-nag         ###   ########.fr        #
+#    Updated: 2023/03/08 15:04:12 by fvon-nag         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,16 +19,26 @@ SOURCES = main.c \
 		sortbig.c\
 		utils2.c\
 
+BSOURCES = bonus_operations.c\
+		bonus_operations2.c\
+		bonus_operations3.c\
+		utils2.c\
+		utils.c\
+		checker_main.c\
+		bonus_utils.c\
+
+
 
 
 
 OBJECTS = $(SOURCES:.c=.o)
+BOBJECTS = $(BSOURCES:.c=.o)
 
 NAME = push_swap
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
-all: $(NAME)
+all: $(NAME) bonus
 
 $(NAME): $(OBJECTS) libft
 	$(CC) $(CFLAGS) -o $@ $(OBJECTS) -Llibft -lft
@@ -36,14 +46,17 @@ $(NAME): $(OBJECTS) libft
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?
 
+bonus: $(BOBJECTS) libft
+	$(CC) $(CFLAGS) -o checker $(BOBJECTS) -Llibft -lft
+
 libft:
 	+make -C libft
 
 clean:
-	rm -f $(OBJECTS)
+	rm -f $(OBJECTS) $(BOBJECTS)
 	+make -C libft clean
 fclean: clean
-	rm -f $(NAME) libft/libft.a
+	rm -f $(NAME) checker libft/libft.a
 
 re: fclean all
 
