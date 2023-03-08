@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 10:16:18 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/07 12:43:24 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/07 16:50:11 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	sortrdx0(t_stacks *s)
 	while (i < max_bits)
 	{
 		j = 0;
-		while (j < s->max - 1)
+		while (j < s->max)
 		{
 			if (((s->a[0] >> i) & 1) == 1)
 				ra(s);
