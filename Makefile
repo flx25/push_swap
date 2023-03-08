@@ -6,7 +6,7 @@
 #    By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 09:42:12 by fvon-nag          #+#    #+#              #
-#    Updated: 2023/03/08 17:19:36 by fvon-nag         ###   ########.fr        #
+#    Updated: 2023/03/08 17:24:10 by fvon-nag         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,10 +38,10 @@ NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-all: $(NAME) bonus
-
 $(NAME): $(OBJECTS) libft
 	$(CC) $(CFLAGS) -o $@ $(OBJECTS) -Llibft -lft
+
+all: $(NAME) bonus
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?
