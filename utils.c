@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 10:45:44 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/08 11:49:06 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/08 13:45:53 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,25 +43,23 @@ int	createstackss(int argc, char **argv, t_stacks *s)
 int	checkforstring(char *arg1)
 {
 	int	i;
-	int	numcount;
+	int	count;
 
 	i = 0;
-	numcount = 0;
+	count = 0;
 	while (arg1[i] != '\0')
 	{
-		if (ft_isdigit(arg1[i]))
-			numcount++;
-		while (ft_isdigit(arg1[i]))
-			i++;
-		while (arg1[i] == ' ')
+		if (arg1[i] != ' ' && arg1[i] != '\0')
+			count++;
+		while (arg1[i] != ' ' && arg1[i] != '\0')
 			i++;
 		if (!ft_isdigit(arg1[i]) && arg1[ft_strlen(arg1)] == '\0' &&
 			arg1[i] != '\0')
 			i++;
 	}
-	if (numcount == 0)
+	if (count == 0)
 		return (1);
-	return (numcount);
+	return (count);
 }
 
 int	findind(int num, t_stacks *s)
