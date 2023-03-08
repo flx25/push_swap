@@ -6,13 +6,15 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:33:02 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/08 09:53:02 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/08 11:03:23 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 // remove debugging flags
+// remove printarrays
+// split argument
 int	createstacks(int argc, char **argv, t_stacks *s)
 {
 	int	i;
@@ -29,7 +31,7 @@ int	createstacks(int argc, char **argv, t_stacks *s)
 		s->a[i -1] = ft_atoi(argv[i], &error);
 		if (error == 1)
 		{
-			ft_printf("Error\nOnly give valid integers as input!");
+			ft_printf("Error\n");
 			closeerror(s);
 		}
 		i++;
@@ -74,8 +76,19 @@ void	sortbysize(t_stacks *s)
 int	main(int argc, char **argv)
 {
 	t_stacks	s;
+	char		**sstrings; //free these
+	int			strcheck;
 
-	createstacks(argc, argv, &s);
+	strcheck = 1;
+	if (argc == 2)
+		strcheck = checkforstring(argv[1]);
+	if (strcheck == 1)
+		createstacks(argc, argv, &s);
+	else
+	{
+		sstrings = ft_split(argv[1], ' ');
+		createstackss(strcheck, sstrings, &s);
+	}
 	checkforduplicates(&s);
 	sortbysize(&s);
 	printarrays(s);
