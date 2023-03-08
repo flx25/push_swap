@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 08:12:00 by fvon-nag          #+#    #+#             */
-/*   Updated: 2022/12/14 17:08:51 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/08 09:06:13 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ static int	skip(const char *nptr, int *isneg, int i)
 	return (i);
 }
 
-static int	digitize(const char *nptr, int i)
+static long	digitize(const char *nptr, int i)
 {
-	int	num;
+	long	num;
 
 	num = 0;
 	while (nptr[i] != '\0' && ft_isdigit(nptr[i]))
@@ -45,19 +45,23 @@ static int	digitize(const char *nptr, int i)
 		num += nptr[i] - '0';
 		i++;
 	}
+	if (!ft_isdigit(nptr[i]) && nptr[i] != '\0')
+		return (-1);
 	return (num);
 }
 
-int	ft_atoi(const char *nptr)
+long	ft_atoi(const char *nptr, int *error)
 {
-	int	i;
-	int	num;
-	int	isneg;
+	int		i;
+	long	num;
+	int		isneg;
 
 	isneg = 0;
 	num = 0;
 	i = 0;
 	num = digitize(nptr, skip(nptr, &isneg, i));
+	if (num == -1 || (num > 2147483647 && isneg == 0) || num > 2147483648)
+		*error = 1;
 	if (isneg == 0)
 		return (num);
 	else

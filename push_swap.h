@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:38:24 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/07 11:17:53 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/08 09:19:50 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,7 @@ int		findind(int num, t_stacks *s);
 void	sortbig(t_stacks *s);
 void	toindex(t_stacks *s);
 void	sortrdx0(t_stacks *s);
+void	closeerror(t_stacks *s);
+void	checkforduplicates(t_stacks *s);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:33:02 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/07 15:57:07 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/08 09:21:43 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,22 @@
 int	createstacks(int argc, char **argv, t_stacks *s)
 {
 	int	i;
+	int	error;
 
+	error = 0;
 	s->a = malloc((argc -1) * sizeof(int));
 	s->b = malloc((argc -1) * sizeof(int));
 	if (!s->a || !s->b)
 		return (-1);
 	i = 1;
-
 	while (i < argc)
 	{
-		s->a[i -1] = ft_atoi(argv[i]);
+		s->a[i -1] = ft_atoi(argv[i], &error);
+		if (error == 1)
+		{
+			ft_printf("Error\nOnly give valid integers as input!");
+			closeerror(s);
+		}
 		i++;
 	}
 	s->as = argc - 1;
@@ -70,8 +76,8 @@ int	main(int argc, char **argv)
 	t_stacks	s;
 
 	createstacks(argc, argv, &s);
+	checkforduplicates(&s);
 	sortbysize(&s);
-
 	printarrays(s);
 	return (0);
 }
