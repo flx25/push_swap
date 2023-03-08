@@ -6,17 +6,17 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 14:04:37 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/08 15:24:52 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/08 16:37:46 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-//remove debugging flags
+
 void	recieveorder2(t_stacks *s, char *line)
 {
 	if (strnstr(line, "rrr\n", 4))
 		rrr(s);
-	else if (strnstr(line, "\n", 2)) // need to change this one
+	else if (strnstr(line, "\n", 1))
 	{
 		if (checkifsort(s) == 1)
 			ft_printf("OK\n");
@@ -26,7 +26,7 @@ void	recieveorder2(t_stacks *s, char *line)
 	}
 	else
 	{
-		ft_printf("Errorelse\n");
+		ft_printf("Error\n");
 		free(line);
 		closeerror(s);
 	}
@@ -70,6 +70,11 @@ void	sortbyorders(t_stacks *s)
 		free(line);
 		line = get_next_line(0);
 		recieveorder(s, line);
+		if (checkifsort(s) == 1)
+		{
+			ft_printf("OK\n");
+			closeerror(s);
+		}
 	}
 }
 
