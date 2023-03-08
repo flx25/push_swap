@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 14:04:37 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/08 14:58:23 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/08 15:24:52 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,17 @@ void	recieveorder2(t_stacks *s, char *line)
 {
 	if (strnstr(line, "rrr\n", 4))
 		rrr(s);
+	else if (strnstr(line, "\n", 2)) // need to change this one
+	{
+		if (checkifsort(s) == 1)
+			ft_printf("OK\n");
+		else
+			ft_printf("KO\n");
+		closeerror(s);
+	}
 	else
 	{
-		ft_printf("Error\n");
+		ft_printf("Errorelse\n");
 		free(line);
 		closeerror(s);
 	}
