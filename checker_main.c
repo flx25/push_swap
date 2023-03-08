@@ -6,12 +6,12 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 14:04:37 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/08 16:37:46 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/08 16:55:18 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+// remove debugging flags
 void	recieveorder2(t_stacks *s, char *line)
 {
 	if (strnstr(line, "rrr\n", 4))
