@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 10:45:44 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/08 11:42:54 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/08 11:49:06 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ int	checkforstring(char *arg1)
 			arg1[i] != '\0')
 			i++;
 	}
+	if (numcount == 0)
+		return (1);
 	return (numcount);
 }
 
