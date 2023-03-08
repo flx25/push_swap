@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 10:45:44 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/08 13:45:53 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/08 13:51:25 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ int	checkforstring(char *arg1)
 			count++;
 		while (arg1[i] != ' ' && arg1[i] != '\0')
 			i++;
-		if (!ft_isdigit(arg1[i]) && arg1[ft_strlen(arg1)] == '\0' &&
-			arg1[i] != '\0')
+		if (!ft_isdigit(arg1[i]) && arg1[ft_strlen(arg1)] == '\0'
+			&& arg1[i] != '\0')
 			i++;
 	}
 	if (count == 0)

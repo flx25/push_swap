@@ -6,7 +6,7 @@
 #    By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 09:42:12 by fvon-nag          #+#    #+#              #
-#    Updated: 2023/03/08 10:53:29 by fvon-nag         ###   ########.fr        #
+#    Updated: 2023/03/08 13:51:58 by fvon-nag         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ OBJECTS = $(SOURCES:.c=.o)
 
 NAME = push_swap
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
