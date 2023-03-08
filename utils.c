@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 10:45:44 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/08 11:10:42 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/08 11:42:54 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	createstackss(int argc, char **argv, t_stacks *s)
 	s->as = argc;
 	s->bs = 0;
 	s->max = argc;
-	free(argv);
+	freeout(argv);
 	return (argc);
 }
 
@@ -54,6 +54,9 @@ int	checkforstring(char *arg1)
 		while (ft_isdigit(arg1[i]))
 			i++;
 		while (arg1[i] == ' ')
+			i++;
+		if (!ft_isdigit(arg1[i]) && arg1[ft_strlen(arg1)] == '\0' &&
+			arg1[i] != '\0')
 			i++;
 	}
 	return (numcount);
