@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 10:45:44 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/08 09:20:51 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/08 09:40:51 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	checkforduplicates(t_stacks *s)
 	i = 0;
 	while (i < s->max)
 	{
-		j = i;
+		j = i +1;
 		while (j < s->max)
 		{
 			if (s->a[i] == s->a[j])
