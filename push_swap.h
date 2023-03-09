@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:38:24 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/08 15:09:31 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/09 08:04:23 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ int		createstackss(int argc, char **argv, t_stacks *s);
 void	freeout(char **out);
 int		createstacks(int argc, char **argv, t_stacks *s);
 int		checkifsort(t_stacks *s);
+void	checkforemptyarg(int argc, char **argv);
 
 #endif

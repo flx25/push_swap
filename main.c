@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 08:33:02 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/08 17:16:10 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/09 08:03:33 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ int	main(int argc, char **argv)
 	char		**sstrings;
 	int			strcheck;
 
+	checkforemptyarg(argc, argv);
 	strcheck = 1;
 	if (argc == 2)
 		strcheck = checkforstring(argv[1]);

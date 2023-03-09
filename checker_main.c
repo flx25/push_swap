@@ -6,12 +6,12 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 14:04:37 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/09 07:44:33 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/09 08:05:46 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-// remove debugging flags
+
 void	recieveorder2(t_stacks *s, char *line)
 {
 	if (ft_strnstr(line, "rrr\n", 4))
@@ -103,6 +103,7 @@ int	main(int argc, char **argv)
 	strcheck = 1;
 	if (argc == 1)
 		return (0);
+	checkforemptyarg(argc, argv);
 	if (argc == 2)
 		strcheck = checkforstring(argv[1]);
 	if (strcheck == 1)
@@ -115,10 +116,8 @@ int	main(int argc, char **argv)
 	checkforduplicates(&s);
 	if (checkifsort(&s) == 0)
 		sortbyorders(&s);
-	if (checkifsort(&s) == 1)
-		ft_printf("OK\n");
 	else
-		ft_printf("KO\n");
+		ft_printf("OK\n");
 	closeerror(&s);
 	return (0);
 }
