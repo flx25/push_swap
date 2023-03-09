@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 14:04:37 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/09 08:05:46 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/09 08:23:18 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,22 +76,6 @@ void	sortbyorders(t_stacks *s)
 			closeerror(s);
 		}
 	}
-}
-
-int	checkifsort(t_stacks *s)
-{
-	int	i;
-
-	if (s->as == s->max && s->as == 1)
-		return (1);
-	i = 1;
-	while (i < s->max)
-	{
-		if (s->a[i] <= s->a[i -1])
-			return (0);
-		i++;
-	}
-	return (1);
 }
 
 int	main(int argc, char **argv)

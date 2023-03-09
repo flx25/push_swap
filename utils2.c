@@ -6,11 +6,27 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 10:51:02 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/09 08:10:46 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/09 08:20:46 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int	checkifsort(t_stacks *s)
+{
+	int	i;
+
+	if (s->as == s->max && s->as == 1)
+		return (1);
+	i = 1;
+	while (i < s->max)
+	{
+		if (s->a[i] <= s->a[i -1])
+			return (0);
+		i++;
+	}
+	return (1);
+}
 
 void	checkforemptyarg(int argc, char **argv)
 {
