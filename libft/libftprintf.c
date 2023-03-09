@@ -6,25 +6,13 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 14:08:04 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/02/08 09:52:01 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/09 07:42:53 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
 #include <unistd.h>
 #include "libft.h"
-
-int	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-	i++;
-	}
-	return (i);
-}
 
 void	ft_putchar(char c, int *wlen)
 {

@@ -6,7 +6,7 @@
 /*   By: fvon-nag <fvon-nag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 14:04:37 by fvon-nag          #+#    #+#             */
-/*   Updated: 2023/03/08 16:55:18 by fvon-nag         ###   ########.fr       */
+/*   Updated: 2023/03/09 07:44:33 by fvon-nag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 // remove debugging flags
 void	recieveorder2(t_stacks *s, char *line)
 {
-	if (strnstr(line, "rrr\n", 4))
+	if (ft_strnstr(line, "rrr\n", 4))
 		rrr(s);
-	else if (strnstr(line, "\n", 1))
+	else if (ft_strnstr(line, "\n", 1))
 	{
 		if (checkifsort(s) == 1)
 			ft_printf("OK\n");
@@ -34,27 +34,27 @@ void	recieveorder2(t_stacks *s, char *line)
 
 void	recieveorder(t_stacks *s, char *line)
 {
-	if (strnstr(line, "sa\n", 3))
+	if (ft_strnstr(line, "sa\n", 3))
 		sa(s);
-	else if (strnstr(line, "sb\n", 3))
+	else if (ft_strnstr(line, "sb\n", 3))
 		sb(s);
-	else if (strnstr(line, "ss\n", 3))
+	else if (ft_strnstr(line, "ss\n", 3))
 		ss(s);
-	else if (strnstr(line, "pa\n", 3))
+	else if (ft_strnstr(line, "pa\n", 3))
 		pa(s);
-	else if (strnstr(line, "pb\n", 3))
+	else if (ft_strnstr(line, "pb\n", 3))
 		pb(s);
-	else if (strnstr(line, "ra\n", 3))
+	else if (ft_strnstr(line, "ra\n", 3))
 		ra(s);
-	else if (strnstr(line, "rb\n", 3))
+	else if (ft_strnstr(line, "rb\n", 3))
 		rb(s);
-	else if (strnstr(line, "rr\n", 3))
+	else if (ft_strnstr(line, "rr\n", 3))
 		rr(s);
-	else if (strnstr(line, "rb\n", 3))
+	else if (ft_strnstr(line, "rb\n", 3))
 		rb(s);
-	else if (strnstr(line, "rra\n", 4))
+	else if (ft_strnstr(line, "rra\n", 4))
 		rra(s);
-	else if (strnstr(line, "rrb\n", 4))
+	else if (ft_strnstr(line, "rrb\n", 4))
 		rrb(s);
 	else
 		recieveorder2(s, line);
