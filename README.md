@@ -1,3 +1,3 @@
 # push_swap
 
-You can see the subject of the project as a PDF file
+You can see the requirements of the project in the file en.subject.pdf
